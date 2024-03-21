@@ -3,12 +3,11 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import Sidebar from "./components/Sidebar/Sidebar";
-import MainContent from "./components/Content/MainContent";
-import styles from "./Home.module.scss";
-import MainContentAlt from "./components/Content/MainContentAlt";
+import Sidebar from "../components/Sidebar/Sidebar";
+import MainContent from "../components/Content/MainContent";
+import styles from "../Home.module.scss";
 
-export default function Home() {
+export default function Secondary() {
   const [sidebarVisible, setSidebarVisible] = useState(false);
 
   const toggleSidebar = () => {
@@ -40,7 +39,7 @@ export default function Home() {
           className="py-4"
           style={{ backgroundColor: "#f8f9fa" }}
         >
-          <MainContentAlt />
+          <MainContent />
         </Col>
       </Row>
     </>

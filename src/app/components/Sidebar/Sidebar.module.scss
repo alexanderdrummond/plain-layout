@@ -1,0 +1,77 @@
+.navLink {
+  color: #333333;
+  font-weight: bold;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    color: black;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .activeLink {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    color: black;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .arrowIcon {
+    transition: transform 0.9s ease-in-out;
+  }
+
+  .rotateArrow {
+    transform: rotate(180deg);
+  }
+
+  &.active .arrowIcon {
+    transform: rotate(180deg);
+  }
+}
+.sidebar {
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 992px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16.667%;
+    z-index: 100;
+  }
+
+  .userModule {
+    padding: 1rem;
+    color: #333333;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    @media (max-width: 762px) {
+      padding: 1px;
+    }
+
+    .text-black,
+    .text-muted {
+      @media (max-width: 576px) {
+        padding-left: 12px;
+      }
+    }
+
+    Button {
+      @media (max-width: 576px) {
+        padding-left: 12px;
+        justify-content: start;
+
+        Image {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+
+.subItem {
+  color: #333333;
+  font-weight: bold;
+}
